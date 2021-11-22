@@ -44,9 +44,15 @@ bytecode = compiled_sol["contracts"]["SimpleStorage.sol"]["SimpleStorage"]["evm"
 abi = compiled_sol["contracts"]["SimpleStorage.sol"]["SimpleStorage"]["abi"]
 
 # for connecting to ganache
-w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:8545"))
-chain_id = 1337
-my_address = "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"
+# w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:8545"))
+# chain_id = 1337
+
+# for connecting to Rinkeby using Infura
+w3 = Web3(
+    Web3.HTTPProvider("https://rinkeby.infura.io/v3/e5c5acd3e38b4338a9675178d709adb7")
+)
+chain_id = 4  # Rinkeby chainId
+my_address = "0x5E789b874e6495A7042A77d43Dd8c9540065C354"  # Metamask test account
 private_key = os.getenv(
     "PRIVATE_KEY"
 )  # never hard code a private key into any contract
