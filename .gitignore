@@ -1,0 +1,2 @@
+# this is a list of files which will be ignored by Git
+.env
