@@ -49,8 +49,8 @@ abi = compiled_sol["contracts"]["SimpleStorage.sol"]["SimpleStorage"]["abi"]
 
 # for connecting to Rinkeby using Infura
 w3 = Web3(
-    Web3.HTTPProvider("https://rinkeby.infura.io/v3/e5c5acd3e38b4338a9675178d709adb7")
-)
+    Web3.HTTPProvider("https://rinkeby.infura.io/v3/e5c5acd3e38b4338a9675178d709adb7") 
+) # project address from Infura website
 chain_id = 4  # Rinkeby chainId
 my_address = "0x5E789b874e6495A7042A77d43Dd8c9540065C354"  # Metamask test account
 private_key = os.getenv(
